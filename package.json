@@ -1,6 +1,6 @@
 {
   "name": "@jimuelpalaca/nestjs-passport-firebase",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Passport - Firebase Auth Module for NestJS",
   "author": "Jimuel Palaca <dev@jimuelpala.ca>",
   "license": "MIT",
