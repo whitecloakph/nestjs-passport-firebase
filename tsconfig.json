@@ -7,7 +7,7 @@
     "experimentalDecorators": true,
     "target": "es6",
     "sourceMap": false,
-    "outDir": "./nestjs-package-starter/dist",
+    "outDir": "./dist",
     "rootDir": "./src",
     "baseUrl": "./",
     "noLib": false
@@ -16,6 +16,6 @@
     "src/**/*.ts"
   ],
   "exclude": [
-    "nestjs-package-starter/node_modules"
+    "node_modules"
   ]
 }
