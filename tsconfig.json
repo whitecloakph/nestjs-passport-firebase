@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "sourceMap": false,
+    "outDir": "./nestjs-package-starter/dist",
+    "rootDir": "./src",
+    "baseUrl": "./",
+    "noLib": false
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "nestjs-package-starter/node_modules"
+  ]
+}
