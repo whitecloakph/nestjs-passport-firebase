@@ -11,7 +11,6 @@ export class FirebaseStrategy extends PassportStrategy(Strategy, 'firebase') {
   constructor(
     @Inject(FIREBASE_AUTH_CONFIG) { issuer, audience }: FirebaseAuthConfig,
   ) {
-    console.log(issuer, audience)
     super({
       secretOrKeyProvider: passportJwtSecret({
         cache: true,
