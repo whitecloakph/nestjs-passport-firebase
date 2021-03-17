@@ -59,6 +59,8 @@ FirebaseAuthModule.register({
 
 ### Protect your APIs
 
+Use `FirebaseAuthGuard` to protect your routes.
+
 ```typescript
 import { Controller, Get, UseGuards } from '@nestjs/common';
 import { AppService } from './app.service';
