@@ -1,8 +1,8 @@
 {
-  "name": "@jimuelpalaca/nestjs-passport-firebase",
+  "name": "@whitecloak/nestjs-passport-firebase",
   "version": "1.0.0",
   "description": "Passport - Firebase Auth Module for NestJS",
-  "author": "Jimuel Palaca <dev@jimuelpala.ca>",
+  "author": "White Cloak Technologies, Inc.",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jimuelpalaca/nestjs-passport-firebase.git"
+    "url": "git+https://github.com/whitecloakph/nestjs-passport-firebase.git"
   },
   "peerDependencies": {
     "@nestjs/common": "^7.6.7",
@@ -88,8 +88,8 @@
     "testEnvironment": "node"
   },
   "bugs": {
-    "url": "https://github.com/jimuelpalaca/nestjs-passport-firebase/issues"
+    "url": "https://github.com/whitecloakph/nestjs-passport-firebase/issues"
   },
-  "homepage": "https://github.com/jimuelpalaca/nestjs-passport-firebase#readme",
+  "homepage": "https://github.com/whitecloakph/nestjs-passport-firebase#readme",
   "dependencies": {}
 }

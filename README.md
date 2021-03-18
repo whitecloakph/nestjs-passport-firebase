@@ -22,7 +22,7 @@ npm install --save-dev @types/passport-jwt
 Install the package
 
 ```bash
-npm install @jimuelpalaca/nestjs-passport-firebase
+npm install @whitecloak/nestjs-passport-firebase
 ```
 
 ## Usage 
