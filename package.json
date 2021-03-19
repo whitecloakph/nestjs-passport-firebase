@@ -1,6 +1,6 @@
 {
   "name": "@whitecloak/nestjs-passport-firebase",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Passport - Firebase Auth Module for NestJS",
   "author": "White Cloak Technologies, Inc.",
   "license": "MIT",
