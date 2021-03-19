@@ -33,7 +33,7 @@ Import the `FirebaseAuthModule` into the root module (the `AppModule`, defined i
 
 ```typescript 
 import { Module } from '@nestjs/common';
-import { FirebaseAuthModule } from '@jimuelpalaca/nestjs-passport-firebase';
+import { FirebaseAuthModule } from '@whitecloak/nestjs-passport-firebase';
 
 @Module({
   imports: [
@@ -64,7 +64,7 @@ Use `FirebaseAuthGuard` to protect your routes.
 ```typescript
 import { Controller, Get, UseGuards } from '@nestjs/common';
 import { AppService } from './app.service';
-import { FirebaseAuthGuard } from '@jimuelpalaca/nestjs-passport-firebase';
+import { FirebaseAuthGuard } from '@whitecloak/nestjs-passport-firebase';
 
 @Controller()
 export class AppController {
@@ -83,7 +83,7 @@ If you are using GraphQL, you need to extend the `FirebaseAuthGuard` and overrid
 ```typescript
 import { ExecutionContext, Injectable } from '@nestjs/common';
 import { GqlExecutionContext } from '@nestjs/graphql';
-import { FirebaseAuthGuard } from '@jimuelpalaca/nestjs-passport-firebase';
+import { FirebaseAuthGuard } from '@whitecloak/nestjs-passport-firebase';
 
 @Injectable()
 export class GqlAuthGuard extends FirebaseAuthGuard {
