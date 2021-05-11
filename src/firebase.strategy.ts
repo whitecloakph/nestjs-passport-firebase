@@ -26,7 +26,7 @@ export class FirebaseStrategy extends PassportStrategy(Strategy, 'firebase') {
     });
   }
 
-  validate(payload: DecodedIdToken) {
+  validate(payload: DecodedIdToken): any | Promise<any> {
     return payload;
   }
 }
