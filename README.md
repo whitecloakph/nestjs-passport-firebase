@@ -114,6 +114,60 @@ export class VersionsResolver {
 
 ```
 
+### Customizing Firebase Strategy `validate` Method
+
+Sometimes you need to tweak the behavior of the `validate` method to fit into your project requirements. You can do
+it by creating a custom strategy and extending the `FirebaseStrategy` to override the `validate` method.
+
+```typescript
+import { DecodedIdToken, FirebaseStrategy } from '@whitecloak/nestjs-passport-firebase';
+import { Repository } from 'typeorm';
+import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { User } from '@entities/user.entity';
+
+@Injectable()
+export class FirebaseCustomStrategy extends FirebaseStrategy {
+  constructor(
+    @InjectRepository(User) private userRepository: Repository<User>,
+  ) {
+    super({
+      audience: process.env.FIREBASE_AUDIENCE,
+      issuer: proccess.env.FIREBASE_ISSUER,
+    });
+  }
+
+  async validate(payload: DecodedIdToken): Promise<User> {
+    // Do the custom behavior here.
+    
+    return this.userRepository.findOne({ email: payload.email });
+  }
+}
+```
+
+Then add the `FirebaseCustomStrategy` to the providers list of the module and don't forget to import its dependencies
+
+```typescript
+import { Module } from '@nestjs/common';
+import { User } from '@entities/user.entity';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { FirebaseAuthModule } from '@whitecloak/nestjs-passport-firebase';
+import { FirebaseCustomStrategt } from '@modules/auth/strategy/firebase-custom.strategy';
+
+@Module({
+  imports: [
+     TypeormModule.forFeature([User]),
+     FirebaseAuthModule.register({
+        audience: '<PROJECT_ID>',
+        issuer: 'https://securetoken.google.com/<PROJECT_ID>',
+     }),
+  ],
+  providers: [FirebaseCustomStrategy]
+})
+export class AppModule {}
+```
+
+
 ## Change Log
 
 See [Changelog](CHANGELOG.md) for more information.
