@@ -12,3 +12,5 @@
   to `any | Promise<any>`. This will allow customization of `validate`
   behavior using method overriding.
 - Add documentation on how you can override the `validate` method.  
+## [1.0.3] - 2022-09-06
+- Update dependencies 
