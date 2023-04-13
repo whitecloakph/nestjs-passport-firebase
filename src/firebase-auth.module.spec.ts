@@ -8,21 +8,6 @@ describe('Firebase Auth Module', () => {
   let module: TestingModule;
   let strategy: FirebaseStrategy;
   let passportModule: PassportModule;
-  const mockDecodedToken = {
-    aud: 'asd',
-    auth_time: 123,
-    exp: 123,
-    firebase: {
-      sign_in_provider: 'google',
-      identities: {
-        any: 'asd',
-      },
-    },
-    iat: 123,
-    iss: 'asd',
-    sub: 'asd',
-    uid: 'asd',
-  };
 
   beforeEach(async () => {
     module = await Test.createTestingModule({
@@ -45,9 +30,14 @@ describe('Firebase Auth Module', () => {
     expect(passportModule).toBeInstanceOf(PassportModule);
   });
 
-  describe('Firebase Strategy validate', () => {
-    it('it should return mockDecodedToken', () => {
-      expect(strategy.validate(mockDecodedToken)).toEqual(mockDecodedToken);
-    });
+  describe('register', () => {
+    it('should be defined', () => {
+      const {module} = FirebaseAuthModule.register({
+        issuer: Math.random().toString(36).substring(2),
+        audience: Math.random().toString(36).substring(2)
+      });
+
+      expect(module).toEqual(FirebaseAuthModule);
+    })
   });
 });
