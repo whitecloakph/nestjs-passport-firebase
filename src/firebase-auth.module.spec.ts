@@ -32,12 +32,12 @@ describe('Firebase Auth Module', () => {
 
   describe('register', () => {
     it('should be defined', () => {
-      const {module} = FirebaseAuthModule.register({
+      const { module } = FirebaseAuthModule.register({
         issuer: Math.random().toString(36).substring(2),
-        audience: Math.random().toString(36).substring(2)
+        audience: Math.random().toString(36).substring(2),
       });
 
       expect(module).toEqual(FirebaseAuthModule);
-    })
+    });
   });
 });

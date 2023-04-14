@@ -14,8 +14,8 @@ describe('Firebase Auth Guard Middleware', () => {
     mockPassport = passport as Mocked<passport.PassportStatic>;
 
     mockPassport.use(
-        'firebase',
-        new FirebaseStrategy({ issuer: 'issuer', audience: 'audience' }),
+      'firebase',
+      new FirebaseStrategy({ issuer: 'issuer', audience: 'audience' }),
     );
 
     context = ({
@@ -39,10 +39,16 @@ describe('Firebase Auth Guard Middleware', () => {
       );
     });
 
-    it('should return true when passport.authenticate passed',  async () => {
-      jest.spyOn(mockPassport, 'authenticate').mockImplementation((authType, options, callback) => () => { callback(null, true); })
+    it('should return true when passport.authenticate passed', async () => {
+      jest
+        .spyOn(mockPassport, 'authenticate')
+        .mockImplementation((authType, options, callback) => () => {
+          callback(null, true);
+        });
 
-      await expect(firebaseAuthGuard.canActivate(context)).resolves.toEqual(true);
+      await expect(firebaseAuthGuard.canActivate(context)).resolves.toEqual(
+        true,
+      );
     });
   });
 });
