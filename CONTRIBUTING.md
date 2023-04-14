@@ -1,7 +1,7 @@
 # Contributing
 
 1. [Fork it](https://help.github.com/articles/fork-a-repo/)
-2. Install dependencies (`npm install`)
+2. Install dependencies (`npm ci`)
 3. Create your feature branch (`git checkout -b my-new-feature`)
 4. Commit your changes (`git commit -am 'Added some feature'`)
 5. Test your changes (`npm test`)
@@ -23,9 +23,4 @@ Please make sure your PR adheres to the guides by running:
 
 ```
 npm run format
-```
-
-and
-```
-npm run lint
 ```
