@@ -2,7 +2,7 @@ import { passportJwtSecret } from 'jwks-rsa';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { PassportStrategy } from '@nestjs/passport';
 import { DecodedIdToken } from './decoded-id-token';
-import {Inject, Injectable} from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { FIREBASE_AUTH_CONFIG } from './constants';
 import { FirebaseAuthConfig } from './firebase-auth.config';
 
