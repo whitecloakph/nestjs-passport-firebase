@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.4] - 2023-04-15
+- Update peer deps `@nestjs/common` to support version ^9.0.0
+
 ## [1.0.3] - 2022-09-06
 - Update devDependencies NestJS packages to v8
 - Update @nestjs/passport to v9
