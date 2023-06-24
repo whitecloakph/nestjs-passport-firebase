@@ -1,12 +1,13 @@
 # Contributing
 
 1. [Fork it](https://help.github.com/articles/fork-a-repo/)
-2. Install dependencies (`npm ci`)
-3. Create your feature branch (`git checkout -b my-new-feature`)
-4. Commit your changes (`git commit -am 'Added some feature'`)
-5. Test your changes (`npm test`)
-6. Push to the branch (`git push origin my-new-feature`)
-7. [Create new Pull Request](https://help.github.com/articles/creating-a-pull-request/)
+2. `nvm use`
+3. Install dependencies (`npm ci`)
+4. Create your feature branch (`git checkout -b my-new-feature`)
+5. Commit your changes (`git commit -am 'Added some feature'`)
+6. Test your changes (`npm test`)
+7. Push to the branch (`git push origin my-new-feature`)
+8. [Create new Pull Request](https://help.github.com/articles/creating-a-pull-request/)
 
 ## Testing
 

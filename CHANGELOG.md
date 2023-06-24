@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.6] - 2023-06-25
+- Update peer deps `@nestjs/passport` to support version `^10.0.0`
+- Add `.nvmrc` to force use node v18 to contributors
+- Update package-lock.json
+
 ## [1.0.5] - 2023-04-15
 - Update peer deps `jwks-rsa` to support version ^3.0.0
 
